@@ -1,14 +1,12 @@
-version: "3.8"
+version: "3"
+
 services:
   web:
-    image: flask-app:latest
+    image: haseebtariq368/flask-app:latest
     ports:
       - "5000:5000"
-    environment:
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
     depends_on:
       - redis
 
   redis:
-    image: redis:7-alpine
+    image: redis:latest
